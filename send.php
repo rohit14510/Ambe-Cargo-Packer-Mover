@@ -32,7 +32,7 @@ $mail->setFrom('info@anandrelocation.com', 'Anand Relocation Pvt Ltd');
 $mail->addReplyTo('info@anandrelocation.com', 'Test Email'); 
  
 // Add a recipient 
-$mail->addAddress('rohitpancholi14510@gmail.com'); 
+$mail->addAddress('Anandrelocation@gmail.com'); 
  
 // Add cc or bcc  
 // $mail->addCC('cc@example.com'); 
