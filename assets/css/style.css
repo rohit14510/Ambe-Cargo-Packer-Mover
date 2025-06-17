@@ -330,7 +330,8 @@ header .book a img {
 
 .hero-slide {
   padding-top: 130px;
-  background-image: linear-gradient(#070707e2, #7E03FC7a), url(../images/hero2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-2.jpg);
+
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -347,7 +348,7 @@ header .book a img {
 }
 
 .hero-two {
-  background-image: linear-gradient(#070707ea, #7E03FCc9), url(../images/hero1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-1.jpg);
 }
 
 /* ---Hero-Section-End--- */
@@ -464,7 +465,7 @@ header .book a img {
   height: 100%;
   background-position: center;
   width: 35%;
-  background-image: url(../images/quote.webp);
+  background-image: url(../images/about-2.jpg);
   background-size: cover;
   content: '';
 }
