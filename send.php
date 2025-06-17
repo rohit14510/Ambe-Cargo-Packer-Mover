@@ -10,12 +10,14 @@ require 'PHPMailer/PHPMailer/SMTP.php';
 // Create an instance of PHPMailer class 
 
 if(isset($_POST['submit'])) {
+    // print_r('hii');
+    // die();
         $name = $_POST['name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $movefrom = $_POST['movefrom'];
         $moveto = $_POST['moveto'];
-        $select = $_POST['select'];
+        $service = $_POST['service'];
         $msg = $_POST['msg'];
         
 $mail = new PHPMailer;
@@ -28,11 +30,11 @@ $mail->Password = 'Standup@123';
 $mail->SMTPSecure = 'tls';
 $mail->Port     = 587;
 // Sender info 
-$mail->setFrom('info@anandrelocation.com', 'Anand Relocation Pvt Ltd'); 
-$mail->addReplyTo('info@anandrelocation.com', 'Test Email'); 
+$mail->setFrom('info@mehrapackersandmovers.com', 'Ambe Cargo Packer Mover'); 
+$mail->addReplyTo('info@mehrapackersandmovers.com', 'Test Email'); 
  
 // Add a recipient 
-$mail->addAddress('Anandrelocation@gmail.com'); 
+$mail->addAddress('rohitpancholi14510@gmail.com'); 
  
 // Add cc or bcc  
 // $mail->addCC('cc@example.com'); 
@@ -48,14 +50,14 @@ $mail->isHTML(true);
 $mailContent = ' 
     <h2>New Enquiry Received</h2> 
     <p>Name :'.$name.'</p> 
-    <p>Email :'.$email.'</p> 
     <p>Phone :'.$phone.'</p> 
+    <p>Email :'.$email.'</p> 
     <p>Movefrom :'.$movefrom.'</p> 
     <p>Moveto :'.$moveto.'</p> 
-    <p>Service :'.$select.'</p> 
+    <p>Service :'.$service.'</p>
     <p>Message :'.$msg.'</p> 
     <p>Thanks and Regards</p>  
-    <p>Anand Relocation Pvt Ltd</p>';  
+    <p>Ambe Cargo Packer Mover</p>';  
 // $mailContent = "Name : ".$name."\n"."Subject : ".$subject."\n"."Email : ".$email."\n"."Mbile : ".$mobile."\n"."Message :".$message; 
 $mail->Body = $mailContent; 
 $mail->headers  = "From: Sender Name <standupstartups1@gmail.com>" . "\r\n";
@@ -66,7 +68,7 @@ $mail->headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 if(!$mail->send()){ ?>
     <script>
     alert("Message could not be sent");
-    window.location.href="https://anandrelocation.com/thank-you.html";
+    window.location.href="https://mehrapackersandmovers.com/thanks.html";
     </script>
     // 
     <?php
@@ -77,8 +79,8 @@ if(!$mail->send()){ ?>
     //       setTimeout(function() {
              
             //   if( $_GET['status'] == 'success') {
-                //  alert("Mail Send Successfully");
-                 window.location.href="https://anandrelocation.com/thank-you.html";
+            //      alert("Mail Send Successfully");
+                 window.location.href="https://mehrapackersandmovers.com/thanks.html";
             //   }
             //   else{
             //       echo 'alert("no good");';
